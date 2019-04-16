@@ -86,6 +86,9 @@ cd ..
 # Change working directory to initrdroot
 cd initrdroot
 
+# Make directories
+mkdir -p bin dev lib/x86_64-linux-gnu lib64 proc sys user usr/local/share/nvim 
+
 # Make init executable
 chmod +x init
 
