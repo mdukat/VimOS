@@ -1,0 +1,31 @@
+#!/bin/ash
+
+mount -t proc none /proc
+mount -t sysfs none /sys
+
+mount -nvt tmpfs none /dev
+mknod -m 600 /dev/console c 5 1
+mknod -m 666 /dev/null c 1 3
+mknod -m 666 /dev/tty c 5 0
+mknod -m 666 /dev/tty0 c 4 0
+mknod -m 666 /dev/tty1 c 4 1
+mknod -m 666 /dev/tty2 c 4 2
+
+# Userspace
+mount -t tmpfs none /user size=10m
+
+# This fixes kernel output to console
+echo "3	4	1	3" > /proc/sys/kernel/printk
+
+echo "" > /user/welcome.txt
+echo "	Welcome in VimOS!" >> /user/welcome.txt
+echo "" >> /user/welcome.txt
+busybox free -m >> /user/welcome.txt
+echo "" >> /user/welcome.txt
+busybox uname -a >> /user/welcome.txt
+echo "" >> /user/welcome.txt
+busybox mount >> /user/welcome.txt
+
+openvt -c 2 nvim /user/welcome.txt
+chvt 2
+sh
