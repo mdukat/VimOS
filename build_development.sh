@@ -41,6 +41,9 @@ cd bin
 ln -s busybox ash
 ln -s busybox sh
 ln -s busybox mount
+ln -s busybox umount
+ln -s busybox rm
+ln -s busybox cd
 ln -s busybox mknod
 ln -s busybox chvt
 ln -s busybox openvt
