@@ -17,10 +17,13 @@ cd ..
 cd initrdroot
 
 # Make directories
-mkdir -p bin dev lib/x86_64-linux-gnu lib64 proc sys user usr/local/share/nvim 
+mkdir -p bin dev lib/x86_64-linux-gnu lib64 proc sys user usr/local/share/nvim
 
 # Make init executable
 chmod +x init
+
+# Make udhcpc script executable
+chmod +x usr/share/udhcpc/default.script
 
 # Copy Busybox to initrdroot
 cp ../busybox-1.30.1/busybox ./bin/
@@ -44,6 +47,14 @@ ln -s busybox openvt
 ln -s busybox ls
 ln -s busybox clear
 ln -s busybox echo
+ln -s busybox ip
+ln -s busybox ifconfig
+ln -s busybox udhcpc
+ln -s busybox route
+ln -s busybox exit
+ln -s busybox ps
+ln -s busybox poweroff
+ln -s busybox mkfs.ext2
 cd ..
 
 # Exit from initrdroot directory
