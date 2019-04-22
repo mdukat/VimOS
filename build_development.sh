@@ -58,7 +58,22 @@ ln -s busybox exit
 ln -s busybox ps
 ln -s busybox poweroff
 ln -s busybox mkfs.ext2
+ln -s busybox cp
+ln -s busybox mv
+ln -s busybox grep
+ln -s busybox dmesg
+ln -s busybox find
+ln -s busybox cpio
+ln -s busybox gzip
+ln -s busybox gunzip
+ln -s busybox mkdir
+ln -s busybox cat
+ln -s busybox fdisk
 cd ..
+
+# Copy mbr.bin and extlinux binaries from syslinux
+cp ../syslinux-6.03/bios/mbr/mbr.bin ./user/mbr.bin
+cp ../syslinux-6.03/bios/extlinux/extlinux ./bin/extlinux
 
 # Exit from initrdroot directory
 cd ..
