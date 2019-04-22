@@ -69,6 +69,7 @@ ln -s busybox gunzip
 ln -s busybox mkdir
 ln -s busybox cat
 ln -s busybox fdisk
+ln -s busybox df
 cd ..
 
 # Copy mbr.bin and extlinux binaries from syslinux
