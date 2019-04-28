@@ -21,6 +21,9 @@ fi
 if [ ! -f "linux-5.07/arch/x86_64/boot/bzImage" ]; then
 	cd linux-5.0.7
 	make defconfig
+	# VesaFB and hostname fix
+	sed -i 's/# CONFIG_FB_VESA is not set/CONFIG_FB_VESA=y/' .config
+	sed -i 's/(none)/VimOS/' .config
 	make -j4
 	cd ..
 fi
