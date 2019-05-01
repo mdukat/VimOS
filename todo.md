@@ -1,13 +1,13 @@
 # TODO
 ## High Priority
- - [ ] - All hard drive devices automount script at init (read from dmesg)
- - [ ] - All busybox links
+ - [x] - All hard drive devices ~~automount~~ *mknod* script at init (read from dmesg)
+ - [x] - All busybox links
  - [ ] - Build configuration:
     - [ ] - 32/64bit
     - [ ] - vi/vim/nvim/both
     - [ ] - iso/rootfs
  - [ ] - Easier "from git to development" stage (bzLinux, syslinux binaries, ld-linux, glibc...)
- - [ ] - User scripts executed from init (on installed OS - `handbook`) `(/etc/scripts ?)`
+ - [x] - User scripts executed from init (on installed OS - `handbook`) `(/etc/scripts ?)`
  - [ ] - Easy keys rebind at OS level
     
 ## Low Priority
