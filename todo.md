@@ -1,4 +1,7 @@
 # TODO
+## Absolutely highest priority
+ - [ ] - Build in docker
+
 ## High Priority
  - [x] - All hard drive devices ~~automount~~ *mknod* script at init (read from dmesg)
  - [x] - All busybox links
