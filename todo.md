@@ -12,6 +12,7 @@
  - [ ] - Easier "from git to development" stage (bzLinux, syslinux binaries, ld-linux, glibc...)
  - [x] - User scripts executed from init (on installed OS - `handbook`) `(/etc/scripts ?)`
  - [ ] - Easy keys rebind at OS level
+ - [ ] - Run vim in screen, instead of baremetal tty
     
 ## Low Priority
  - [ ] - VimOS logo
